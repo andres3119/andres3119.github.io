@@ -1,0 +1,137 @@
+:root {
+	--colorPrimario: linear-gradient(to top left, #ff6600 0%, #ffff00 100%);
+} 
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../img/login.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
+
+body::after {
+	content: "";
+	width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 100;
+}
+
+.home {
+	text-decoration: none;
+}
+
+.icon-home {
+	color: #fff;
+	position: relative;
+	display: inline-block;
+	z-index: 1000;
+	font-size: 25px;
+	top: 25px;
+	left: 25px;
+	font-family: 'Roboto';
+	border-bottom: 3px solid #ff8000;
+}
+
+.icon-home:hover {
+	color: rgba(0,0,0,0.9);
+}
+
+.icon-home p {
+	float: right;
+	margin-left: 5px;
+	margin-top: -2px;
+}
+
+.caja {
+	position: absolute;
+	z-index: 200;
+	left: 50%;
+	top: 116px;
+	width: 420px;
+	transform: translateX(-50%);
+	background: rgba(0,0,0,0.6);
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #ff8000;
+}
+
+.logo img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	margin-top: -67px;
+	margin-left: 37.5%;
+	margin-bottom: 10px;
+}
+
+.caja h2 {
+	color: #fff;
+	font-family: 'Open Sans';
+	text-align: center;
+	padding-bottom: 17px;
+}
+
+.caja input {
+	display: block;
+	width: 100%;
+}
+
+.caja input[type="text"], input[type="password"] {
+	height: 45px;
+	margin: 30px 0 30px 0;
+	color: #fff;
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid #ff8000;
+	outline: none;
+	text-align: center;
+	font-family: 'Roboto';
+	font-size: 17px;
+}
+
+.caja input[type="submit"] {
+	background: #ff8000;
+	border: none;
+	height: 45px;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 2px solid transparent;
+}
+
+.caja input[type="submit"]:hover {
+	background: var(--colorPrimario);
+	border: 2px solid #000;
+}
+
+.caja a {
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	font-family: 'Open Sans';
+}
+
+.caja a:hover {
+	color: #e6e6e6;
+}
+
+@media screen and (max-width: 720px) {
+	.icon-home p {
+		display: none;
+	}
+}

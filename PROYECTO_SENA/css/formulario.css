@@ -1,0 +1,92 @@
+:root {
+	--colorPrimario: linear-gradient(to top left, #ff6600 0%, #ffff00 100%);
+} 
+
+body {
+	background: url(../img/form.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+}
+
+body::after {
+	content: "";
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	top: 0;
+	left: 0;
+}
+
+.caja {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 30px;
+	background: rgba(0,0,0,0.7);
+	width: 60%;
+	color: #fff;
+	position: absolute;
+	z-index: 200;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #ff8000;
+	margin-top: 135px;
+}
+
+.caja label {
+	display: block;
+	width: 100%;
+	font-family: 'Open Sans';
+	padding: 10px;
+}
+
+.caja input[type="text"], input[type="password"] {
+	height: 40px;
+	background: transparent;
+	display: block;
+	width: 90%;
+	text-align: center;
+	font-size: 18px;
+	margin-left: 15px;
+	border: none;
+	outline: none;
+	color: #fff;
+	border-bottom: 3px solid #ff8000;
+}
+
+.caja .boton {
+	grid-column: span 2;
+	width: 90%;
+	text-align: center;
+	margin: 10px auto;
+	height: 40px;
+	background: #ff8000;
+	border: none;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.caja input[type="submit"]:hover {
+	background: var(--colorPrimario);
+	border: 2px solid #000;
+}
+
+.caja a {
+	grid-column: span 2;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	font-family: 'Open Sans';
+	margin-top: -30px;
+}
+
+.caja a:hover {
+	color: #e6e6e6;
+}
